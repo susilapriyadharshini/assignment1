@@ -133,7 +133,7 @@ def get_video_information(Video_id):
                                 Views=i['statistics']['viewCount'],
                                 Likes=i['statistics'].get("likeCount"),
                                 Favorite_count=i['statistics'].get('favoriteCount'),
-                                Comments=i['statistics']['commentCount'],
+                                Comments=i['statistics'].get('commentCount',0),
                                 Tags=i['snippet'].get('tags',),
                                 Duration=i['contentDetails']['duration'],
                                 Thumbnail=i['snippet']['thumbnails'],
